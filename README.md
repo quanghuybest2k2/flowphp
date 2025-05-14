@@ -52,6 +52,8 @@ composer install
 php -S localhost:8000
 ```
 
+NOTE: clone `.env.example` to `.env`
+
 Sau khi chạy lệnh trên, truy cập vào `http://localhost:8000` để xem ứng dụng.
 
 ---
