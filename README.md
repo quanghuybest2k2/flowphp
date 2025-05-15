@@ -49,12 +49,12 @@ cd flowphp
 composer install
 
 # Khởi động server phát triển
-php -S localhost:8000
+php flow ser
 ```
 
 NOTE: clone `.env.example` to `.env`
 
-Sau khi chạy lệnh trên, truy cập vào `http://localhost:8000` để xem ứng dụng.
+Sau khi chạy lệnh trên, truy cập vào `http://localhost:2002` để xem ứng dụng.
 
 ---
 

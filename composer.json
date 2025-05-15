@@ -3,5 +3,8 @@
     "psr-4": {
       "src\\": "src/"
     }
+  },
+  "require": {
+    "monolog/monolog": "^3.9"
   }
 }
