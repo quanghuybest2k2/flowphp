@@ -2,9 +2,9 @@
 
 require_once __DIR__ . '/./vendor/autoload.php';
 
-use src\routes\Web;
-use src\config\Database;
-use src\utils\Logger;
+use FlowPHP\routes\Web;
+use FlowPHP\config\Database;
+use FlowPHP\utils\Logger;
 
 try {
     $db = new Database();

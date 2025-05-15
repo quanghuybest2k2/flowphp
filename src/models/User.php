@@ -1,6 +1,6 @@
 <?php
 
-namespace src\models;
+namespace FlowPHP\models;
 
 class User implements \JsonSerializable
 {

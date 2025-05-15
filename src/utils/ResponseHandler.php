@@ -1,6 +1,6 @@
 <?php
 
-namespace src\utils;
+namespace FlowPHP\utils;
 
 class ResponseHandler
 {

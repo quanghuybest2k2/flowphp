@@ -1,6 +1,6 @@
 <?php
 
-namespace src\utils;
+namespace FlowPHP\utils;
 
 use Monolog\Logger as MonoLogger;
 use Monolog\Handler\StreamHandler;

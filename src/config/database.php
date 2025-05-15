@@ -1,10 +1,10 @@
 <?php
 
-namespace src\config;
+namespace FlowPHP\config;
 
 use PDO;
 use PDOException;
-use src\utils\ResponseHandler;
+use FlowPHP\utils\ResponseHandler;
 
 require_once __DIR__ . '/env.php';
 

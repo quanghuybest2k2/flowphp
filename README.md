@@ -41,14 +41,9 @@
 ## 📦 Cài đặt
 
 ```bash
-# Clone repository
-git clone https://github.com/quanghuybest2k2/flowphp.git
-cd flowphp
-
-# Cài đặt phụ thuộc (nếu có)
-composer install
-
-# Khởi động server phát triển
+# Installation
+composer require quanghuybest2k2/flowphp
+# Start server
 php flow ser
 ```
 

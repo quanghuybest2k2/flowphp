@@ -1,8 +1,8 @@
 <?php
 
-namespace src\routes;
+namespace FlowPHP\routes;
 
-use src\utils\ResponseHandler;
+use FlowPHP\utils\ResponseHandler;
 
 class Router
 {

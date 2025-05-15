@@ -1,9 +1,9 @@
 <?php
 
-namespace src\services;
+namespace FlowPHP\services;
 
-use src\models\User;
-use src\repositories\UserRepository;
+use FlowPHP\models\User;
+use FlowPHP\repositories\UserRepository;
 use Exception;
 
 class UserService

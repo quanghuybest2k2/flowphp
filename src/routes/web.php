@@ -1,12 +1,12 @@
 <?php
 
-namespace src\routes;
+namespace FlowPHP\routes;
 
-use src\routes\Router;
-use src\controllers\UserController;
-use src\repositories\UserRepository;
-use src\services\UserService;
-use src\utils\ResponseHandler;
+use FlowPHP\routes\Router;
+use FlowPHP\controllers\UserController;
+use FlowPHP\repositories\UserRepository;
+use FlowPHP\services\UserService;
+use FlowPHP\utils\ResponseHandler;
 
 class Web
 {

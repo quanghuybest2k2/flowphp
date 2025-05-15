@@ -1,10 +1,15 @@
 {
+  "name": "quanghuybest2k2/flowphp",
+  "description": "A lightweight PHP framework",
+  "type": "library",
+  "license": "MIT",
   "autoload": {
     "psr-4": {
-      "src\\": "src/"
+      "FlowPHP\\": "src/"
     }
   },
   "require": {
-    "monolog/monolog": "^3.9"
+    "monolog/monolog": "^3.9",
+    "php": ">=8.0"
   }
 }

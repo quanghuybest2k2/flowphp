@@ -1,8 +1,8 @@
 <?php
 
-namespace src\repositories;
+namespace FlowPHP\repositories;
 
-use src\models\User;
+use FlowPHP\models\User;
 use PDO;
 
 class UserRepository

@@ -1,9 +1,9 @@
 <?php
 
-namespace src\controllers;
+namespace FlowPHP\controllers;
 
-use src\services\UserService;
-use src\utils\ResponseHandler;
+use FlowPHP\services\UserService;
+use FlowPHP\utils\ResponseHandler;
 use Exception;
 
 class UserController
