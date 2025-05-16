@@ -4,7 +4,6 @@ namespace FlowPHP\config;
 
 use PDO;
 use PDOException;
-use FlowPHP\utils\ResponseHandler;
 
 require_once __DIR__ . '/env.php';
 
@@ -38,11 +37,7 @@ class Database
             );
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
-            ResponseHandler::responseError(
-                'Database connection failed: ' . $e->getMessage(),
-                "Internal Server Error",
-                500
-            );
+            throw new \Exception('Database connection failed: ' . $e->getMessage(), 500);
             exit;
         }
     }

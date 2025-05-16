@@ -4,7 +4,10 @@ require_once __DIR__ . '/vendor/autoload.php';
 use FlowPHP\routes\Web;
 use FlowPHP\routes\Api;
 use FlowPHP\config\Database;
-use FlowPHP\utils\Logger;
+
+$whoops = new \Whoops\Run;
+$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+$whoops->register();
 
 // config access static files
 $requestUri = $_SERVER['REQUEST_URI'];
@@ -37,5 +40,5 @@ try {
         $web_router->handleRequest();
     }
 } catch (Exception $e) {
-    Logger::error("Error: " . $e->getMessage());
+    throw new \Exception('Internal Server Error: ' . $e->getMessage(), 500);
 }
