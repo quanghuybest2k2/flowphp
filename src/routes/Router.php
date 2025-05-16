@@ -2,8 +2,6 @@
 
 namespace FlowPHP\routes;
 
-use FlowPHP\utils\ResponseHandler;
-
 class Router
 {
     private array $routes = [];
@@ -74,20 +72,21 @@ class Router
      *
      * @return void
      */
-    public function dispatch(): void
+    public function dispatch($uriOverride = null): void
     {
         $method = $_SERVER['REQUEST_METHOD'];
-        $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+        $uri = $uriOverride ?? parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
         foreach ($this->routes as $route) {
             if ($route['method'] === $method && preg_match($this->convertToRegex($route['path']), $uri, $matches)) {
                 array_shift($matches); // Remove the full match from the array
-                call_user_func_array($route['handler'], $matches);
+                $response = call_user_func_array($route['handler'], $matches);
+                echo $response;
                 return;
             }
         }
 
-        ResponseHandler::responseError(null, "Route not found", 404);
+        echo "Route not found";
     }
 
     /**

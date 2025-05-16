@@ -1,6 +1,6 @@
 <?php
 
-namespace FlowPHP\controllers;
+namespace FlowPHP\controllers\api;
 
 use FlowPHP\services\UserService;
 use FlowPHP\utils\ResponseHandler;

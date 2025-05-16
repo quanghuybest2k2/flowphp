@@ -3,21 +3,17 @@
 namespace FlowPHP\routes;
 
 use FlowPHP\routes\Router;
-use FlowPHP\controllers\UserController;
-use FlowPHP\repositories\UserRepository;
-use FlowPHP\services\UserService;
-use FlowPHP\utils\ResponseHandler;
+use FlowPHP\controllers\HomeController;
+use FlowPHP\core\View;
 
 class Web
 {
     private $router;
-    private $userController;
+    private $homeController;
 
     public function __construct(\PDO $pdo)
     {
-        $repo = new UserRepository($pdo);
-        $service = new UserService($repo);
-        $this->userController = new UserController($service);
+        $this->homeController = new HomeController();
         $this->router = new Router();
     }
 
@@ -29,13 +25,8 @@ class Web
     public function handleRequest(): void
     {
         // Default route
-        $this->router->get('/', fn() => ResponseHandler::responseSuccess("Welcome to the API"));
-
-        // User route
-        $this->router->get('/users/{id}', fn($id) => $this->userController->show((int)$id));
-        $this->router->get('/users', fn() => $this->userController->list());
-        $this->router->post('/users', fn() => $this->userController->store());
-
+        $this->router->get('/', fn() => View::render('welcome', ['greeting' => 'Welcome to FlowPHP']));
+        $this->router->get('/home', fn() => $this->homeController->homeWithLayout());
         // Dispatch request
         $this->router->dispatch();
     }
