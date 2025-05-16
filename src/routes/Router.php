@@ -86,7 +86,7 @@ class Router
             }
         }
 
-        echo "Route not found";
+        throw new \Exception('Route not found', 404);
     }
 
     /**
