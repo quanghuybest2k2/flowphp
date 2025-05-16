@@ -42,7 +42,10 @@
 
 ```bash
 # Installation
-composer require quanghuybest2k2/flowphp
+composer create-project quanghuybest2k2/flowphp example
+
+cd example
+
 # Start server
 php flow ser
 ```
